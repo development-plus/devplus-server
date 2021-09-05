@@ -44,5 +44,5 @@
       }
     }
   },
-  "mongodb": "mongodb+srv://db:DBPW@clusterfuck.00hoj.mongodb.net/test"
+  "mongodb": "MONGO_STRING"
 }
