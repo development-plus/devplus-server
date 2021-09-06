@@ -29,7 +29,7 @@
     "dev": "ts-node-dev --no-notify src/",
     "start": "npm run compile && node lib/",
     "jest": "jest  --forceExit",
-    "compile": "sh -c 'rm -rf lib/ && tsc'"
+    "compile": "npm i typescript -g && npm i shx -g && shx rm -rf lib/ && tsc"
   },
   "standard": {
     "env": [
@@ -55,6 +55,7 @@
     "mongodb-core": "^3.2.7",
     "mongoose": "^5.13.8",
     "serve-favicon": "^2.5.0",
+    "tsc": "^2.0.3",
     "winston": "^3.3.3"
   },
   "devDependencies": {
