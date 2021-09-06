@@ -29,7 +29,7 @@
     "dev": "ts-node-dev --no-notify src/",
     "start": "npm run compile && node lib/",
     "jest": "jest  --forceExit",
-    "compile": "npm i typescript -g && npm i shx -g && shx rm -rf lib/ && tsc"
+    "compile": "npm i typescript -g && tsc"
   },
   "standard": {
     "env": [
