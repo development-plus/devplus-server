@@ -1,20 +1,13 @@
-// users-model.js - A mongoose model
-//
+// test-model.js - A mongoose model
+// 
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 module.exports = function (app) {
-  const modelName = 'users';
+  const modelName = 'test';
   const mongooseClient = app.get('mongooseClient');
-  const schema = new mongooseClient.Schema({
-  
-    email: { type: String, unique: true, lowercase: true },
-    password: { type: String },
-    username: { type: String, unique: true},
-  
-    googleId: { type: String },
-  
-    githubId: { type: String },
-  
+  const { Schema } = mongooseClient;
+  const schema = new Schema({
+    text: { type: String, required: true }
   }, {
     timestamps: true
   });
@@ -25,5 +18,5 @@ module.exports = function (app) {
     mongooseClient.deleteModel(modelName);
   }
   return mongooseClient.model(modelName, schema);
-
+  
 };
