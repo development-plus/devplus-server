@@ -10,10 +10,7 @@
     "entity": "user",
     "service": "users",
     "secret": "IV/grxiNtjYrGWLvgSvj3TDQsYQ=",
-    "authStrategies": [
-      "jwt",
-      "local"
-    ],
+    "authStrategies": ["jwt", "local"],
     "jwtOptions": {
       "header": {
         "typ": "access"
@@ -28,15 +25,12 @@
       "passwordField": "password"
     },
     "oauth": {
-      "redirect": "/",
+      "redirect": "",
       "google": {
-        "key": "<google oauth key>",
-        "secret": "<google oauth secret>",
-        "scope": [
-          "email",
-          "profile",
-          "openid"
-        ]
+        "key": "143624566867-6ln629ol7dd1vslo1j3s38u2mn01esfl.apps.googleusercontent.com",
+        "secret": "An_Ci2MJB_GV3bmNZbzhmK-j",
+        "scope": ["email", "profile", "openid"],
+        "nonce": true
       },
       "github": {
         "key": "<github oauth key>",
