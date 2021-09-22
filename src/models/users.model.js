@@ -13,6 +13,7 @@ module.exports = function (app) {
       googleId: { type: String },
       profilePicture: {},
       githubId: { type: String },
+      followers: { type: Array },
     },
     {
       timestamps: true,

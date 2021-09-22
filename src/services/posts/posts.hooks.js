@@ -1,9 +1,17 @@
 const { authenticate } = require("@feathersjs/authentication").hooks;
-const theAlgorithm = require("../../hooks/the-algorithm");
+
 module.exports = {
   before: {
     all: [],
-    find: [],
+    find: [
+      authenticate("jwt"),
+      async (context) => {
+        const followers = context.params.user.followers;
+        context.params.query.userId = { $in: followers };
+        context.params.query["$sort"] = { createdAt: -1 };
+        return context;
+      },
+    ],
     get: [authenticate("jwt")],
     create: [
       authenticate("jwt"),
@@ -21,7 +29,7 @@ module.exports = {
     all: [],
     find: [],
     get: [
-      (context) => {
+      (context, userService) => {
         theAlgorithm(context);
       },
     ],
