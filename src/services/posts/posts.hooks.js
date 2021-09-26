@@ -6,7 +6,7 @@ module.exports = {
     find: [
       authenticate("jwt"),
       async (context) => {
-        const followers = context.params.user.followers;
+        const followers = context.params.user.followers; // f
         context.params.query.userId = { $in: followers };
         context.params.query["$sort"] = { createdAt: -1 };
         return context;

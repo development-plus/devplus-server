@@ -33,8 +33,8 @@
         "nonce": true
       },
       "github": {
-        "key": "<github oauth key>",
-        "secret": "<github oauth secret>"
+        "key": "707344654e33ac6d8d34",
+        "secret": "d072b7f937449c66150b443d4e27f40153df38c0"
       }
     }
   },
