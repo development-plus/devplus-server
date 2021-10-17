@@ -30,11 +30,7 @@ module.exports = {
   after: {
     all: [],
     find: [],
-    get: [
-      (context, userService) => {
-        theAlgorithm(context);
-      },
-    ],
+    get: [],
     create: [],
     update: [],
     patch: [],
