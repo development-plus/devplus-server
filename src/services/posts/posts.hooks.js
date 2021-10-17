@@ -6,8 +6,10 @@ module.exports = {
     find: [
       authenticate("jwt"),
       async (context) => {
-        const followers = context.params.user.followers; // f
-        context.params.query.userId = { $in: followers };
+        const followers = context.params.user.followers;
+        context.params.query.userId = {
+          $in: followers.concat(context.params.user._id),
+        };
         context.params.query["$sort"] = { createdAt: -1 };
         return context;
       },

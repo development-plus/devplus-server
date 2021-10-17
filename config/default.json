@@ -6,6 +6,7 @@
     "default": 10,
     "max": 50
   },
+  "path": "/oauth",
   "authentication": {
     "entity": "user",
     "service": "users",
