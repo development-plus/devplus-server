@@ -11,7 +11,7 @@ module.exports = function (app) {
       password: { type: String, required: true },
       username: { type: String, unique: true, required: true },
       googleId: { type: String },
-      profilePicture: {},
+      profilePicture: { type: ImageData, default: new ImageData(320, 320) },
       githubId: { type: String },
       followers: { type: Array },
     },
