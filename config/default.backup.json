@@ -1,0 +1,43 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "path": "/oauth",
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "IV/grxiNtjYrGWLvgSvj3TDQsYQ=",
+    "authStrategies": ["jwt", "local"],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "365d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "",
+      "google": {
+        "key": "143624566867-6ln629ol7dd1vslo1j3s38u2mn01esfl.apps.googleusercontent.com",
+        "secret": "An_Ci2MJB_GV3bmNZbzhmK-j",
+        "scope": ["email", "profile", "openid"],
+        "nonce": true
+      },
+      "github": {
+        "key": "707344654e33ac6d8d34",
+        "secret": "d072b7f937449c66150b443d4e27f40153df38c0"
+      }
+    }
+  },
+  "mongodb": "MONGO_STRING"
+}
